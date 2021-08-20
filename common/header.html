@@ -1,0 +1,46 @@
+<base href="http://localhost:8089/foro/">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="index.html">Index</a>
+        </li>
+      </ul>
+	  <form class="form-inline" id="login">
+	  	<a href="common/signin.html" type="button" class="btn btn-dark">Iniciar sesión</a>
+		<a href="common/signup.html" type="button" class="btn btn-dark">Registrarse</a>
+	  </form>
+	  <form class="form-inline" id="perfil">
+	  	<a href="#" type="button" class="btn btn-dark">Perfil</a>
+		<a type="button" class="btn btn-dark" id="signoff">Cerrar sesión</a>
+	  </form>
+    </div>
+  </div>
+</nav>
+
+<script> 
+	$(function(){
+		$("#perfil").hide();
+		$("#login").show();
+		
+		var token;
+		
+		if(sessionStorage.getItem('token') !== null){
+			token = JSON.parse(sessionStorage.getItem('token'));	
+			$("#perfil").show();
+			$("#login").hide();
+		}
+		
+		
+		$("#signoff").on("click", function(){
+			sessionStorage.clear();
+			token = null;
+			$("#perfil").hide();
+			$("#login").show();
+		});
+		
+		console.log(JSON.parse(sessionStorage.getItem('token')));
+			
+	});
+</script> 

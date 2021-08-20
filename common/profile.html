@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1" />
+	<!-- JQuery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<!-- Boostrap -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<script src="../bootstrap/js/bootstrap.min.js"></script>
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<script>
+	$(function(){
+		$("#header").load("header.html");
+		var token = JSON.parse(sessionStorage.getItem('token'));
+	});
+	</script> 
+</head>
+<body>
+<div id="header"></div>
+<div id="boostrap"></div>
+	<div>
+		<a id=""></a>
+	</div>
+</body>
+</html>

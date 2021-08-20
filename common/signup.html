@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="ISO-8859-1" />
+	<!-- JQuery -->
+	<script src="../js/jquery-3.6.0.min.js"></script>
+	<!-- Boostrap -->
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- CSS -->
+	<link rel="stylesheet" href="../css/style.css">
+	<script>
+	$(function(){
+		$("#header").load("header.html"); 
+	});
+	</script> 
+</head>
+<body>
+<div id="header"></div>
+<div id="boostrap"></div>
+<form class="form-horizontal" id="signup-form">
+	  <div class="container">
+		<h1>Sign Up</h1>
+		
+		<hr>
+		<label for="nombre"><b>Nombre</b></label>
+		<input type="text" placeholder="Nombre" id="nombre" name="nombre" required>
+		
+		<label for="nombreUsuario"><b>Nombre de Usuario</b></label>
+		<input type="text" placeholder="Nombre Usuario" id="nombreUsuario" name="nombreUsuario" required>
+		
+		<label for="email"><b>Email</b></label>
+		<input type="text" placeholder="Email" id="email" name="email" required>
+
+		<label for="psw"><b>Password</b></label>
+		<input type="password" placeholder="Password" id="password" name="psw" required>
+		
+		<label for="rol"><b>Rol</b></label>
+		</br>
+		<select id="rol" name="select">
+			<option value="Admin">Admin</option>
+		</select>
+		</br>
+		</br>
+		
+		
+		<div class="clearfix">
+		  <button type="submit"  class="signupbtn">Sign Up</button>
+		</div>
+	  </div>
+	<div id="resultados"></div>
+</form>
+	<script src="../js/signup.js"></script>
+</body>
+</html>
